@@ -1,15 +1,15 @@
 import React from "react";
 
-function Accordion(props:any) {
+function Accordion(props: any) {
     return (
         <div>
-            <AccordionTitle title={props.title}/>
-            <AccordionBody/>
+            <AccordionTitle title={props.title} />
+            <AccordionBody />
         </div>
     )
 }
 
-const AccordionTitle = (props:any) => {
+const AccordionTitle = (props: any) => {
     return (
         <h3>{props.title}</h3>
     )
@@ -24,5 +24,8 @@ const AccordionBody = () => {
         </ul>
     )
 }
+
+/////////
+//////
 
 export default Accordion;
