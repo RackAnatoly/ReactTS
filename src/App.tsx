@@ -5,7 +5,7 @@ import Accordion from "./components/Accordion/Accordion";
 import Rating from "./components/Rating/Rating";
 
 function App() {
-    return (
+    return ( 
         <div>
             <PageTitle title={'This is APP component'}/>
             <PageTitle title={'My Friends'}/>
