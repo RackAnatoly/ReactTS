@@ -25,4 +25,6 @@ const AccordionBody = () => {
     )
 }
 
+/////////
+
 export default Accordion;
