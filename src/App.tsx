@@ -11,8 +11,8 @@ function App() {
             {/*<PageTitle title={'My Friends'} />*/}
             {/*Article 1*/}
             {/*<Rating value={3} />*/}
-            <Accordion titleValue={'Menu 1'} />
-            <Accordion titleValue={'Menu 2'} />
+            <Accordion titleValue={'Menu 1'} collapsed={true} />
+            <Accordion titleValue={'Menu 2'} collapsed={false}/>
             {/*Article 2*/}
             {/*<Rating value={0} />*/}
             {/*<Rating value={1} />*/}
@@ -24,7 +24,11 @@ function App() {
     );
 }
 
-const PageTitle = (props: any) => {
+type PageTitlePropsType = {
+    title: string
+}
+
+const PageTitle = (props: PageTitlePropsType) => {
     return <h1>{props.title}</h1>
 }
 
