@@ -21,7 +21,7 @@ function App() {
             {/*<Rating value={4} />*/}
             {/*<Rating value={5} />*/}
         </div>
-    );
+    ); 
 }
 
 type PageTitlePropsType = {
