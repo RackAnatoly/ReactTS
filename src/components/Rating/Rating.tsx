@@ -30,7 +30,6 @@ type StarPropsType = {
 
 const Star = (props: StarPropsType) => {
     return <span onClick={ ()=>{props.onClick(props.value) }}>{props.selected === true ? <b>Star</b> : "Star"}</span>
-
 }
 
 export default Rating;
