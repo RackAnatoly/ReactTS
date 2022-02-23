@@ -7,6 +7,7 @@ import UncontrolledRating from "./components/UncontrolledRating/UncontrolledRati
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import UncontrolledOnOff from "./components/UncontroledOnOff/UncontrolledOnOff";
 import OnOff from "./components/OnOff/OnOff";
+import {UncontrolledInput, UncontrolledInputByButtonPress} from "./components/Uncontrolled input/UncontrolledInput";
 
 function App() {
 
@@ -15,13 +16,15 @@ function App() {
     let [switchOn, SetSwitchOn] = useState<boolean>(false);
     return (
         <div>
-            <OnOff on={switchOn} onChange={SetSwitchOn}/>
-            <Rating value={ratingValue} onClick={SetRatingValue}/>
-            <Accordion titleValue={"Menu"}
-                       collapsed={accordionCollapsed}
-                       onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}
-            />
-            <UncontrolledOnOff OnChange={SetSwitchOn}/> {switchOn.toString()}
+            {/*<OnOff on={switchOn} onChange={SetSwitchOn}/>*/}
+            {/*<Rating value={ratingValue} onClick={SetRatingValue}/>*/}
+            {/*<Accordion titleValue={"Menu"}*/}
+            {/*           collapsed={accordionCollapsed}*/}
+            {/*           onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}*/}
+            {/*/>*/}
+            {/*<UncontrolledOnOff OnChange={SetSwitchOn}/> {switchOn.toString()}*/}
+            <UncontrolledInput/>
+            <UncontrolledInputByButtonPress/>
         </div>
     );
 }
