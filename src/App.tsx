@@ -8,9 +8,11 @@ import UncontrolledAccordion from "./components/UncontrolledAccordion/Uncontroll
 import UncontrolledOnOff from "./components/UncontroledOnOff/UncontrolledOnOff";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledInput, UncontrolledInputByButtonPress} from "./components/Uncontrolled input/UncontrolledInput";
+import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/ControlledInput/ControlledInput";
+import {Select} from "./components/Select/Select";
 
 function App() {
-
+    const [value, setValue] = useState('2');
     let [ratingValue, SetRatingValue] = useState<RatingValueType>(0)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
     let [switchOn, SetSwitchOn] = useState<boolean>(false);
@@ -21,10 +23,25 @@ function App() {
             {/*<Accordion titleValue={"Menu"}*/}
             {/*           collapsed={accordionCollapsed}*/}
             {/*           onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}*/}
+            {/*           items={['Anatoli','Tatsi','Adrian']}*/}
             {/*/>*/}
             {/*<UncontrolledOnOff OnChange={SetSwitchOn}/> {switchOn.toString()}*/}
-            <UncontrolledInput/>
-            <UncontrolledInputByButtonPress/>
+            {/*<UncontrolledInput/>*/}
+            {/*<UncontrolledInputByButtonPress/>*/}
+            {/*<ControlledInput/>*/}
+            {/*<ControlledCheckbox/>*/}
+            {/*<ControlledSelect/>*/}
+            <UncontrolledAccordion titleValue={'One'}/>
+            <Select
+                value={''}
+                onChange={() => {
+                    console.log('changed')
+                }}
+                items={
+                    [
+                        {value: '1', title: 'Minsk'},
+                        {value: '2', title: 'Moskow'},
+                    ]}/>
         </div>
     );
 }

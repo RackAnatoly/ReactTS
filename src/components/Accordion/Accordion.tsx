@@ -1,29 +1,32 @@
 import React from "react";
+import {Button} from "@material-ui/core";
 
 type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
-    onChange:()=>void
-
+    onChange: () => void
+    items: string[]
 }
-
-function Accordion(props: AccordionPropsType) {
-    return (
-        <div>
-            <AccordionTitle title={props.titleValue} onChange={props.onChange}/>
-            {!props.collapsed && <AccordionBody/>}
-
-        </div>
-    )
+type AccordionBodyPropsType = {
+    items: string[]
 }
 
 
 type AccordionTitlePropsType = {
     title: string
-    onChange:()=>void
-
-
+    onChange: () => void
 }
+
+
+function Accordion(props: AccordionPropsType) {
+    return (
+        <div>
+            <AccordionTitle title={props.titleValue} onChange={props.onChange}/>
+            {!props.collapsed && <AccordionBody items={props.items}/>}
+        </div>
+    )
+}
+
 
 const AccordionTitle = (props: AccordionTitlePropsType) => {
     return (
@@ -31,14 +34,16 @@ const AccordionTitle = (props: AccordionTitlePropsType) => {
     )
 }
 
-const AccordionBody = () => {
+const AccordionBody = ({items,...props}: AccordionBodyPropsType) => {
     return (
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            {items.map((i,index) => <li key={index}>{i}</li>)}
         </ul>
+
     )
+
 }
+
+
 
 export default Accordion;
