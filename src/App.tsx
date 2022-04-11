@@ -10,6 +10,9 @@ import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledInput, UncontrolledInputByButtonPress} from "./components/Uncontrolled input/UncontrolledInput";
 import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/ControlledInput/ControlledInput";
 import {Select} from "./components/Select/Select";
+import {Example} from "./components/ReactMemo/ReactMemo";
+import UseMemo from "./components/UseMemo/UseMemo";
+import UseEffect from "./components/useEffect/useEffect";
 
 function App() {
     const [value, setValue] = useState('2');
@@ -31,17 +34,20 @@ function App() {
             {/*<ControlledInput/>*/}
             {/*<ControlledCheckbox/>*/}
             {/*<ControlledSelect/>*/}
-            <UncontrolledAccordion titleValue={'One'}/>
-            <Select
-                value={''}
-                onChange={() => {
-                    console.log('changed')
-                }}
-                items={
-                    [
-                        {value: '1', title: 'Minsk'},
-                        {value: '2', title: 'Moskow'},
-                    ]}/>
+            {/*<UncontrolledAccordion titleValue={'One'}/>*/}
+            {/*<Select*/}
+            {/*    value={''}*/}
+            {/*    onChange={() => {*/}
+            {/*        console.log('changed')*/}
+            {/*    }}*/}
+            {/*    items={*/}
+            {/*        [*/}
+            {/*            {value: '1', title: 'Minsk'},*/}
+            {/*            {value: '2', title: 'Moskow'},*/}
+            {/*        ]}/>*/}
+            {/*<Example/>*/}
+            {/*<UseMemo/>*/}
+            <UseEffect/>
         </div>
     );
 }
