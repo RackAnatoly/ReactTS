@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 const UseEffect = () => {
     const [counter, setCounter] = useState(0);
     const [fake, setFake] = useState(0);
-    const [date, setDate] = useState<Date>()
+    const [date , setDate] = useState<Date>()
 
     // useEffect(() => {
     //     setInterval(() => {
